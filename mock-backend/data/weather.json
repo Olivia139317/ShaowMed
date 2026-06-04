@@ -1,0 +1,98 @@
+{
+  "weather": {
+    "current": {
+      "condition": "晴",
+      "temperature": 22,
+      "feels_like": 20,
+      "humidity": 45,
+      "wind_speed": 12,
+      "wind_direction": "东南风",
+      "air_quality": "良",
+      "aqi": 68,
+      "uv_index": 6,
+      "visibility": 10
+    },
+    "forecast": {
+      "today": {
+        "date": "2026-05-24",
+        "condition": "晴转多云",
+        "temp_high": 25,
+        "temp_low": 15,
+        "precipitation": 0,
+        "suggestion": "天气不错，适合出行"
+      },
+      "tomorrow": {
+        "date": "2026-05-25",
+        "condition": "多云转阴",
+        "temp_high": 23,
+        "temp_low": 16,
+        "precipitation": 20,
+        "suggestion": "可能有小雨，建议带伞"
+      },
+      "day_after_tomorrow": {
+        "date": "2026-05-26",
+        "condition": "小雨",
+        "temp_high": 20,
+        "temp_low": 14,
+        "precipitation": 60,
+        "suggestion": "有雨，适合室内活动"
+      }
+    },
+    "hourly": [
+      {
+        "time": "14:00",
+        "temperature": 22,
+        "condition": "晴",
+        "precipitation": 0
+      },
+      {
+        "time": "15:00",
+        "temperature": 23,
+        "condition": "晴",
+        "precipitation": 0
+      },
+      {
+        "time": "16:00",
+        "temperature": 24,
+        "condition": "多云",
+        "precipitation": 0
+      },
+      {
+        "time": "17:00",
+        "temperature": 23,
+        "condition": "多云",
+        "precipitation": 0
+      },
+      {
+        "time": "18:00",
+        "temperature": 21,
+        "condition": "多云",
+        "precipitation": 0
+      },
+      {
+        "time": "19:00",
+        "temperature": 19,
+        "condition": "多云",
+        "precipitation": 0
+      },
+      {
+        "time": "20:00",
+        "temperature": 18,
+        "condition": "多云",
+        "precipitation": 0
+      }
+    ],
+    "alerts": [],
+    "lifestyle_suggestions": {
+      "clothing": "适合穿薄外套或长袖",
+      "exercise": "适宜户外运动",
+      "uv_protection": "紫外线较强，建议防晒",
+      "allergy": "花粉浓度较低",
+      "car_wash": "适宜洗车",
+      "travel": "天气良好，适合出游"
+    },
+    "temperature_change": 0,
+    "will_rain": false,
+    "rain_time": null
+  }
+}

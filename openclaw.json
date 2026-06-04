@@ -1,0 +1,78 @@
+{
+  "models": {
+    "providers": {
+      "custom-1": {
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKey": "${DEEPSEEK_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-v4-pro",
+            "name": "DeepSeek V4 Pro",
+            "contextWindow": 128000,
+            "maxTokens": 8192,
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {"input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0},
+            "api": "openai-completions"
+          }
+        ]
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "<YOUR_TELEGRAM_BOT_TOKEN>",
+      "dmPolicy": "allowlist",
+      "allowFrom": ["<YOUR_TELEGRAM_USER_ID>"],
+      "groupPolicy": "allowlist",
+      "groupAllowFrom": ["<YOUR_TELEGRAM_USER_ID>"],
+      "groups": { "*": { "requireMention": true } }
+    }
+  },
+  "gateway": {
+    "controlUi": {
+      "allowedOrigins": ["https://<YOUR_NGROK_DOMAIN>", "http://localhost:18789"]
+    }
+  },
+  "agents": {
+    "defaults": {
+      "maxConcurrent": 4,
+      "subagents": {"maxConcurrent": 8},
+      "skills": ["identity-switcher", "local-life-radar", "queue-monitor", "ride-hailing", "proactive-scheduler"],
+      "heartbeat": {
+        "every": "1m",
+        "prompt": "1) curl -s http://host.docker.internal:5000/api/monitors/check-all — if any_triggered, alert user. 2) curl -s http://host.docker.internal:5000/api/notifications/pending — deliver pending. 3) curl -s http://host.docker.internal:5000/api/flash-deals — mention deals. 4) Get Beijing time (hour, weekday). curl -s -X POST http://host.docker.internal:5000/api/proactive-check -H 'Content-Type: application/json' -d '{\"hour\":<hour>,\"weekday\":<0-6>,\"identity_mode\":\"<last_mode_if_available>\"}' — if should_notify, deliver to user; if reason is quiet_hours/daily_limit/user_busy/recently_rejected, stay silent. 5) curl -s http://host.docker.internal:5000/api/events?limit=3 — alert on sudden_full/rain/temp_change. 6) If nothing important, reply 'OK' only.",
+        "isolatedSession": true,
+        "directPolicy": "allow",
+        "includeSystemPromptSection": false,
+        "suppressToolErrorWarnings": true
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "identity": {
+          "name": "LiHua",
+          "emoji": "🦊",
+          "theme": "随影 ShadowMe — 身份感知城市生活管家"
+        }
+      }
+    ]
+  },
+  "meta": {
+    "lastTouchedVersion": "2.2.5",
+    "lastTouchedAt": "2026-06-02T20:25:00.000+08:00"
+  }
+}

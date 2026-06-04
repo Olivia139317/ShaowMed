@@ -1,0 +1,53 @@
+{
+  "name": "LiHua",
+  "display_name": "LiHua",
+  "version": "2.2.5",
+  "description": "身份感知城市私人管家，随你的状态而变",
+  "soul": "./SOUL.md",
+  "model": "deepseek-v4-pro",
+  "language": "zh-CN",
+  "skills": [
+    {
+      "name": "identity-switcher",
+      "path": "./skills/identity-switcher",
+      "enabled": true
+    },
+    {
+      "name": "local-life-radar",
+      "path": "./skills/local-life-radar",
+      "enabled": true
+    },
+    {
+      "name": "queue-monitor",
+      "path": "./skills/queue-monitor",
+      "enabled": true
+    },
+    {
+      "name": "ride-hailing",
+      "path": "./skills/ride-hailing",
+      "enabled": true
+    },
+    {
+      "name": "proactive-scheduler",
+      "path": "./skills/proactive-scheduler",
+      "enabled": true
+    }
+  ],
+  "memory": {
+    "enabled": true,
+    "keys": [
+      "favorite_places",
+      "food_preferences",
+      "avoid_foods",
+      "budget_range",
+      "commute_route",
+      "last_identity_mode"
+    ]
+  },
+  "settings": {
+    "always_proactive": true,
+    "max_questions_per_reply": 1,
+    "response_language": "zh-CN",
+    "tone": "professional_warm"
+  }
+}
