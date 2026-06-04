@@ -198,7 +198,7 @@ LiHua: [识别到 solo 模式 + 工作日晚上]
 ## 演示检查清单
 
 - [ ] 启动 Mock Backend: `cd mock-backend && python server.py`
-- [ ] 确认 OpenClaw 部署: 按 CLAUDE.md 部署流程执行
+- [ ] 确认 OpenClaw 部署: 按 README.md 和 openclaw.json 说明完成部署
 - [ ] 验证 `/api/chat` 返回含 activities 字段
 - [ ] 验证 `/api/sandbox/status` 各指标正常
 - [ ] 验证 `/api/events` 显示所有事件类型

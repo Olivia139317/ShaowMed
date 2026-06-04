@@ -1033,11 +1033,12 @@ def sandbox_status():
 
 @app.route('/health', methods=['GET'])
 def health_check():
+    active_monitor_count = len([t for t in monitoring_tasks.values() if t.get('status') == 'active'])
     return jsonify({
         'status': 'healthy',
         'service': 'ShadowMe Mock Backend',
         'version': '2.2.5',
-        'active_monitors': len(monitoring_tasks),
+        'active_monitors': active_monitor_count,
         'restaurant_count': len(DB['restaurants']),
         'timestamp': datetime.now().isoformat()
     })
