@@ -1,4 +1,4 @@
-# ShadowMe 随影
+# ShadowMe（随影）
 
 身份感知城市生活管家，面向美团 2026 AI Hackathon 命题赛道 01：基于 OpenClaw 的本地生活「全天候私人管家」。
 
