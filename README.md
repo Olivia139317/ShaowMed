@@ -27,7 +27,6 @@ Telegram/WebChat -> OpenClaw Gateway -> LiHua Agent
 - `mock-backend/server.py`：动态 mock 后端，23 个接口。
 - `demo/demo-script.md`：7 个演示场景。
 - `demo/test-cases.md`：功能、集成、沙盒和主动提醒测试用例。
-- `docs/submission/`：比赛提交材料草稿。
 
 ## 快速启动
 
@@ -85,10 +84,6 @@ sh scripts/smoke-test.sh
 3. 启动 mock backend，确认 `http://localhost:5000/health` 返回 `version: 2.2.5`。
 4. 重启 OpenClaw 容器并通过 WebChat 或 Telegram 验证。
 
-## 提交表单建议
-
-截图中的表单字段可参考 `docs/submission/SUBMISSION_FORM.md`。
-
 ## 比赛提交材料
 
-实名提交材料不放入公开仓库。公开仓库仅保留可运行工程代码、演示脚本和复现说明。
+实名提交材料通过比赛表单单独上传，不放入公开仓库。公开仓库仅保留可运行工程代码、演示脚本和复现说明。
