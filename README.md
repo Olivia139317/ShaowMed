@@ -1,12 +1,12 @@
 # ShadowMe（随影）
 
-身份感知城市生活管家，面向美团 2026 AI Hackathon 命题赛道 01：基于 OpenClaw 的本地生活「全天候私人管家」。
+身份感知城市生活管家，面向美团 2026 AI Hackathon 命题赛道 01：基于 OpenClaw 的本地生活全天候私人管家。
 
 ## 项目亮点
 
 - **身份感知**：LiHua 根据用户状态自动切换 commuter、dater、explorer、rescue、solo 五种模式。
 - **三场景闭环**：餐饮推荐、排队监控、出行叫车、娱乐活动和天气/路况联动。
-- **7x24 自主协同**：OpenClaw heartbeat 每分钟检查排队、闪惠、通知、天气和主动提醒。
+- **7x24 自主协同**：OpenClaw heartbeat 每 30 分钟检查排队、闪惠、通知、天气和主动提醒，避免演示期间产生过高模型调用。
 - **动态沙盒**：Flask mock backend 持续生成 14 类随机事件，数据不是静态 JSON。
 - **隐私合规**：用户画像为模拟数据或用户显式输入，只保存短期偏好关键词，不采集真实隐私。
 
@@ -80,10 +80,12 @@ sh scripts/smoke-test.sh
 ## OpenClaw 部署
 
 1. 在 `openclaw.json` 中填入 DeepSeek API Key 和 Telegram Bot Token。
-2. 按 `AGENTS.md` 中的 Docker 部署命令同步 `agents/main`、`openclaw.json` 和 `chat.sh`。
+2. 按本地部署脚本或 OpenClaw 环境同步 `agents/main`、`openclaw.json` 和 `chat.sh`。
 3. 启动 mock backend，确认 `http://localhost:5000/health` 返回 `version: 2.2.5`。
 4. 重启 OpenClaw 容器并通过 WebChat 或 Telegram 验证。
 
 ## 比赛提交材料
+
+推荐将作品链接填写为可公开访问的视频演示链接，避免评审时受本机 Docker、mock backend 或 Telegram Bot 在线状态影响。
 
 实名提交材料通过比赛表单单独上传，不放入公开仓库。公开仓库仅保留可运行工程代码、演示脚本和复现说明。
