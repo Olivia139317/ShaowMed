@@ -1,0 +1,9 @@
+services:
+  mock-backend:
+    build:
+      context: ./mock-backend
+    image: shadowme-mock-backend:latest
+    container_name: shadowme-mock-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped

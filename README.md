@@ -36,6 +36,18 @@ Windows PowerShell:
 .\scripts\start-backend.ps1
 ```
 
+Docker:
+
+```powershell
+.\scripts\start-backend-docker.ps1
+```
+
+or:
+
+```powershell
+docker compose up -d mock-backend
+```
+
 Linux/macOS:
 
 ```bash
