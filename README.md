@@ -96,6 +96,8 @@ sh scripts/smoke-test.sh
 3. 启动 mock backend，确认 `http://localhost:5000/health` 返回 `version: 2.2.5`。
 4. 重启 OpenClaw 容器并通过 WebChat 或 Telegram 验证。
 
+云服务器长期在线部署见 `DEPLOY_VPS.md`。
+
 ## 比赛提交材料
 
 推荐将作品链接填写为可公开访问的视频演示链接，避免评审时受本机 Docker、mock backend 或 Telegram Bot 在线状态影响。
